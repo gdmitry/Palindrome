@@ -1,0 +1,1 @@
+"use strict";function testPalyndrom(n){var t,r;for(t=0;t<n.length;t++)for(r=t+2;r<n.length;r++)checkIfPalyndrom(n.substring(t,r+1))}function checkIfPalyndrom(n){for(var t=0,r=n.length-1;n[t]===n[r]&&t!==r;)t++,r--;return t===r?(console.log("+++",n),n):!1}$(".sendButton").click(function(){var n=$("input.input-field").val();return testPalyndrom(n),!1});

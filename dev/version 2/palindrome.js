@@ -25,6 +25,7 @@ function checkIfPalyndrom(str) {
 }
 
 $(".sendButton").click(function () {
-	testPalyndrom($("input.input-field").val());
+	var testString = $("input.input-field").val();
+	testPalyndrom(testString);
 	return false;
 });
