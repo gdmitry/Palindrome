@@ -1,0 +1,25 @@
+{
+	"name": "PalindromeApp",
+	"version": "1.0.0",
+	"description": "palindrome",
+	"main": "src/main.js",
+	"dependencies": {
+	},
+	"devDependencies": {
+		"jquery": "latest",
+		"grunt": "latest",
+		"grunt-contrib-jshint": "latest",
+		"grunt-contrib-watch": "latest",
+		"grunt-jsdoc": "latest",
+		"grunt-contrib-jasmine": "latest",
+		"grunt-contrib-clean": "^0.6.0",
+		"grunt-contrib-copy": "latest",
+		"systemjs-builder": "^0.13.3",
+		"systemjs": "^0.18.11",
+		"semantic-ui": "^2.1.4"
+	},
+	"scripts": {
+		"test": "grunt test",
+		"build": "grunt build"
+	}
+}

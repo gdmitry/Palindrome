@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../node_modules/semantic-ui/dist/semantic.css">
+	<title>Palindrome</title>
+	<script src="http://localhost:35729/livereload.js"></script>
+	<script src="../node_modules/systemjs/dist/system.js"></script>
+	<script>
+		System.config({
+			paths: {
+				'Palindrome': './Palindrome.js',
+				'jquery': '../node_modules/jquery/dist/jquery.js',
+				'semantic-ui': '../node_modules/semantic-ui/dist/semantic.js',
+			}
+		});
+
+		System.import('./index.js');		
+	</script>
+</head>
+
+<body>
+	<div class="fix">
+		<div class="card">
+			<h1 class="title"><strong>Palyndrom test</strong></h1>
+			<form>
+				<div class="ui input">
+					<input type="text" class="input-field" value="yabxyzyxba1" placeholder="Input test string ...">
+				</div>
+				<div class="results">
+
+				</div>
+				<br>
+				<button class="ui primary button sendButton">Test</button>
+				<button class="ui button resetButton">Discard</button>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>
