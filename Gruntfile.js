@@ -87,7 +87,7 @@ module.exports = function (grunt) {
 					//helpers: [''],
 					keepRunner: false,
 					outfile: 'test/specs.html',
-					specs: ['test/main.js']
+					specs: ['test/specs.js']
 				}
 			}
 		},
@@ -113,7 +113,7 @@ module.exports = function (grunt) {
 			test: {
 				options: {
 					//config: 'test/systemjs.config.js',
-					source: 'test/main.js',
+					source: 'test/spec.js',
 					output: 'test/specs.js',
 					minify: false
 				}
