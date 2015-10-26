@@ -1,5 +1,3 @@
 'use strict';
 
-describe('Module', function () {
-	require('./spec/Palindrome.js');	
-});
+require('./spec/Palindrome.js');

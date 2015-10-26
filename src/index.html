@@ -6,18 +6,10 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="../node_modules/semantic-ui/dist/semantic.css">
 	<title>Palindrome</title>
-	<script src="http://localhost:35729/livereload.js"></script>
+	<!--	<script src="http://localhost:35729/livereload.js"></script>-->
 	<script src="../node_modules/systemjs/dist/system.js"></script>
 	<script>
-		System.config({
-			paths: {
-				'Palindrome': './Palindrome.js',
-				'jquery': '../node_modules/jquery/dist/jquery.js',
-				'semantic-ui': '../node_modules/semantic-ui/dist/semantic.js',
-			}
-		});
-
-		System.import('./index.js');		
+		System.import('./index.js');
 	</script>
 </head>
 
@@ -27,7 +19,7 @@
 			<h1 class="title"><strong>Palyndrom test</strong></h1>
 			<form>
 				<div class="ui input">
-					<input type="text" class="input-field" value="yabxyzyxba1" placeholder="Input test string ...">
+					<input type="text" class="input-field" placeholder="Input test string ...">
 				</div>
 				<div class="results">
 

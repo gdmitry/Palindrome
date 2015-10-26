@@ -1,19 +1,16 @@
-'format amd';
+'use strict';
 
-define(['jquery', 'Palindrome','semantic-ui'], function ($, palindrome, semantic) {
-	'use strict';
+var palindrome = require('./Palindrome.js'),
+	$ = require('../node_modules/jquery/dist/jquery.js');
 
-	$(".sendButton").click(function () {
-		var testString = $(".input-field").val();
-		palindrome.testPalyndrom(testString);
-		return false;
-	});
 
-	$(".sendButton").click(function () {
-		var testString = $(".input-field").val();
-		palindrome.testPalyndrom(testString);
-		return false;
-	});
-	
+$(".sendButton").click(function () {
+	var testString = $(".input-field").val();
+	palindrome.testPalyndrom(testString);
+	return false;
 });
 
+$(".resetButton").click(function () {
+	$(".input-field").val('ggfg');
+	return false;
+});
