@@ -1,25 +1,25 @@
 'use strict';
 
 var palindrome = require('./Palindrome.js'),
-	$ = require('../node_modules/jquery/dist/jquery.js');
+	jq =  require('../node_modules/jquery/dist/jquery.js');	
 
-$(".sendButton").click(function () {
-	var testString = $(".test-string").val();
-	var ignoreCase = $('.case').prop('checked');
+jq(".sendButton").click(function () {
+	var testString = jq(".test-string").val();
+	var ignoreCase = jq('.case').prop('checked');
 
 	console.log(ignoreCase);
 	displayResults(palindrome.testPalyndrom(testString, ignoreCase));
 	return false;
 });
 
-$(".resetButton").click(function () {
-	$(".test-string").val('');
-	$(".fix").removeClass('result');
+jq(".resetButton").click(function () {
+	jq(".test-string").val('');
+	jq(".fix").removeClass('result');
 	return false;
 });
 
 function displayResults(results) {
-	var list = $('.result-list');
+	var list = jq('.result-list');
 
 	list.empty();
 	results.forEach(function (item) {
@@ -27,8 +27,8 @@ function displayResults(results) {
 	});
 
 	if (results.length) {
-		$(".fix").addClass('result');
+		jq(".fix").addClass('result');
 	} else {
-		$(".fix").removeClass('result');
+		jq(".fix").removeClass('result');
 	}
 }

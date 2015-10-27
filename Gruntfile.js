@@ -82,7 +82,7 @@ module.exports = function (grunt) {
 				options: {
 					//polyfills: ['src/libs/polyfills.js'],
 					vendor: [
-						'node_modules/systemjs/dist/system1.js'
+						'node_modules/systemjs/dist/system.js'
 					],
 					//helpers: [''],
 					keepRunner: false,

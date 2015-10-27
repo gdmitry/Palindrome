@@ -2,7 +2,7 @@
 	"name": "PalindromeApp",
 	"version": "1.0.0",
 	"description": "palindrome",
-	"main": "src/main.js",
+	"main": "src/index.js",
 	"dependencies": {
 	},
 	"devDependencies": {
@@ -15,8 +15,7 @@
 		"grunt-contrib-clean": "^0.6.0",
 		"grunt-contrib-copy": "latest",
 		"systemjs-builder": "^0.13.3",
-		"systemjs": "^0.18.11",
-		"semantic-ui": "^2.1.4"
+		"systemjs": "^0.18.11"
 	},
 	"scripts": {
 		"test": "grunt test",
