@@ -8,25 +8,49 @@
 	<title>Palindrome</title>
 </head>
 
-<body>
+<body class="main">
 	<div class="fix">
-		<div class="card">
-			<h1 class="title"><strong>Palyndrom test</strong></h1>
-			<form>
-				<div class="ui input">
-					<input type="text" class="input-field" value="yabxyzyxba1" placeholder="Input test string ...">
+		<form class="ui form segment">
+			<p class="title">Identify palindromes within a string</p>
+			<div class="field">
+				<div class="field">
+					<label>Test string</label>
+					<input placeholder="Please, input a string ..." class="test-string" name="test-string" type="text">
 				</div>
-				<div class="results">
+			</div>
+			<div class="inline field">
+				<div class="ui checkbox">
+					<input type="checkbox" name="case" tabindex="0">
+					<label>Ignore case</label>
+				</div>
+			</div>
+			<div class="ui blue submit button sendButton" data-content="Add users to your feed">Submit</div>
+			<div class="ui clear button">Clear</div>
 
-				</div>
-				<br>
-				<button class="ui primary button sendButton">Test</button>
-				<button class="ui button resetButton">Discard</button>
-			</form>
+		</form>
+		<div class="ui ignored positive message">
+			Field groups automatically receive responsive styling, swapping to one field per row on mobile devices.
 		</div>
+		<table class="ui celled table">
+			<thead>
+				<tr>
+					<th>№</th>
+					<th>Palindrome</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Cell</td>
+					<td>Cell</td>
+				</tr>
+				<tr>
+					<td>Cell</td>
+					<td>Cell</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
-	<script src="index.min.js"></script>
-	<script src="semantic.js"></script>
 </body>
+
 
 </html>

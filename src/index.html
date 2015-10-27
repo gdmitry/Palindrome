@@ -13,21 +13,28 @@
 	</script>
 </head>
 
-<body>
+<body class="main">
 	<div class="fix">
-		<div class="card">
-			<h1 class="title"><strong>Palyndrom test</strong></h1>
-			<form>
-				<div class="ui input">
-					<input type="text" class="input-field" placeholder="Input test string ...">
+		<form class="ui form segment">
+			<p class="title">Identify palindromes within a string</p>
+			<div class="field">
+				<div class="field">
+					<label>Test string</label>
+					<input placeholder="Please, input a string ..." class="test-string" name="test-string" type="text">
 				</div>
-				<div class="results">
-
+			</div>
+			<div class="inline field">
+				<div class="ui checkbox">
+					<input type="checkbox" name="case" tabindex="0">
+					<label>Ignore case</label>
 				</div>
-				<br>
-				<button class="ui primary button sendButton">Test</button>
-				<button class="ui button resetButton">Discard</button>
-			</form>
+			</div>
+			<div class="ui blue submit button sendButton" data-content="Add users to your feed">Submit</div>
+			<div class="ui clear button resetButton">Clear</div>
+		</form>
+		<div class="ui ignored positive message">
+			<ol class="result-list">
+			</ol>
 		</div>
 	</div>
 </body>
