@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="semantic.css">
+	<title>Palindrome</title>
+</head>
+
+<body class="main">
+	<div class="fix">
+		<form class="ui form segment" action="">
+			<p class="title">Identify palindromes within a string</p>
+			<div class="field">
+				<div class="field">
+					<label>Test string</label>
+					<input type="text" class="test-string" name="test-string" placeholder="Please, input a string ..." required>
+				</div>
+			</div>
+			<div class="inline field">
+				<div class="ui checkbox">
+					<input type="checkbox" name="case" class="case" tabindex="0">
+					<label>Ignore case</label>
+				</div>
+			</div>
+			<button type="submit" class="ui blue submit button sendButton">Submit</button>
+			<button type="reset" class="ui clear button resetButton">Clear</button>
+		</form>
+		<div class="ui ignored positive message">
+			<ol class="result-list">
+			</ol>
+		</div>
+	</div>
+	<script src="index.min.js"></script>
+</body>
+
+</html>

@@ -111,7 +111,6 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jasmine');
 	grunt.loadTasks('custom_modules/grunt-systemjs-builder/tasks');
 
-
 	grunt.registerTask('live', ['watch']);
 	grunt.registerTask('code', ['jshint:dev']);
 	grunt.registerTask('doc', ['clean:doc', 'jsdoc']);
