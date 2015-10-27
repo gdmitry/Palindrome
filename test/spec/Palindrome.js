@@ -1,6 +1,6 @@
 'use strict';
 
-var palindrome = require('../../src/Palindrome.js');
+var palindrome = require('../../src/modules/Palindrome.js');
 
 describe('Palindrome', function () {
 
