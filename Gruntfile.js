@@ -52,14 +52,14 @@ module.exports = function (grunt) {
 						expand: true,
 						cwd: 'src/styles/',
 						src: 'style.css',
-						dest: BUILD_DIR + '/'
+						dest: BUILD_DIR + '/css/'
 					},
 					{
 						expand: true,
 						cwd: 'node_modules/semantic-ui-css/',
 						src: 'semantic.css',
-						dest: BUILD_DIR + '/'
-					}					
+						dest: BUILD_DIR + '/css/'
+					}
 				]
 
 			}
@@ -68,19 +68,19 @@ module.exports = function (grunt) {
 			testAll: {
 				options: {
 					vendor: [
-						'node_modules/systemjs/dist/system.js'
+						'node_modules/systemjs/dist/system.js1'
 					],
 					keepRunner: false,
 					outfile: 'test/specs.html',
 					specs: ['test/specs.js']
 				}
-			}			
+			}
 		},
 		systemjs: {
 			build: {
 				options: {
 					source: 'src/modules/index.js',
-					output: BUILD_DIR + '/index.js',
+					output: BUILD_DIR + '/js/index.js',
 					minify: false,
 					sourceMaps: true
 				}
@@ -88,7 +88,7 @@ module.exports = function (grunt) {
 			buildmin: {
 				options: {
 					source: 'src/modules/index.js',
-					output: BUILD_DIR + '/index.min.js',
+					output: BUILD_DIR + '/js/index.min.js',
 					minify: true,
 					sourceMaps: true
 				}
@@ -115,6 +115,6 @@ module.exports = function (grunt) {
 	grunt.registerTask('code', ['jshint:dev']);
 	grunt.registerTask('doc', ['clean:doc', 'jsdoc']);
 	grunt.registerTask('test', ['systemjs:test', 'jasmine', 'clean:test']);
-	grunt.registerTask('build', ['clean:build','systemjs:build', 'systemjs:buildmin', 'copy:build']);
-	grunt.registerTask('release', ['build', 'test', 'code']);
+	grunt.registerTask('build', ['clean:build', 'systemjs:build', 'systemjs:buildmin', 'copy:build']);
+	grunt.registerTask('release', ['test', 'code', 'build']);
 };

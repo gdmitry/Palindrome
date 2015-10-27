@@ -1,23 +1,21 @@
 define(['../../node_modules/jquery/dist/jquery.js'], function ($) {
 	'use strict';
 
-	var Display = {
-		displayResults: displayResults		
-	};
-
-	return Display;
+	var list = $('.result-list');
 
 	function displayResults(results) {
-		var list = $('.result-list');
-
-		list.empty();
-		results.forEach(function (item) {
-			list.append('<li>' + item + '</li>');
-		});		
+		var innerHTML = results.map(function (item) {
+			return '<li>' + item + '</li>';
+		}).join('');
 		
-		if(!results.length) {
-			list.append('No palindromes found.');
-		}			
+		if (!results.length) {
+			list.html('No palindromes found.');
+		}else {
+			list.html(innerHTML);
+		}
 	}
 
+	return {
+		displayResults: displayResults
+	};
 });

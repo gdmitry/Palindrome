@@ -1,3 +1,3 @@
 'use strict';
 
-require('./spec/Palindrome.js');
+require('./spec/palindrome.js');

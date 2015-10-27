@@ -1,15 +1,5 @@
 define(function () {
-	'use strict';
-
-	var Palindrome = {
-		testPalyndrom: testPalyndrom,
-		checkIfPalyndrom: checkIfPalyndrom,
-		splitOnSubstrings: splitOnSubstrings,
-		sortPalindromes: sortPalindromes,
-		getUniquePalindromes: getUniquePalindromes
-	};
-
-	return Palindrome;
+	'use strict';	
 
 	function splitOnSubstrings(testString) {
 		var i, j, substrings = [];
@@ -79,4 +69,12 @@ define(function () {
 
 		return false;
 	}
+	
+	return {
+		testPalyndrom: testPalyndrom,
+		checkIfPalyndrom: checkIfPalyndrom,
+		splitOnSubstrings: splitOnSubstrings,
+		sortPalindromes: sortPalindromes,
+		getUniquePalindromes: getUniquePalindromes
+	};
 });
