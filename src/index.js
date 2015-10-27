@@ -5,7 +5,7 @@ var palindrome = require('./Palindrome.js'),
 
 $(".sendButton").click(function () {
 	var testString = $(".test-string").val();
-	var ignoreCase = $('.case').prop('checked')
+	var ignoreCase = $('.case').prop('checked');
 
 	console.log(ignoreCase);
 	displayResults(palindrome.testPalyndrom(testString, ignoreCase));
