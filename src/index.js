@@ -21,6 +21,7 @@ $(".resetButton").click(function () {
 function displayResults(results) {
 	var list = $('.result-list');
 
+	list.empty();
 	results.forEach(function (item) {
 		list.append('<li>' + item + '</li>');
 	});
