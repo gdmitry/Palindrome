@@ -1,9 +1,3 @@
-// usage:
-// install node!!!
-// npm install -g grunt-cli
-// npm install
-// grunt
-
 module.exports = function (grunt) {
 	var DOC_DIR = 'doc';
 	var BUILD_DIR = 'build'
@@ -51,50 +45,41 @@ module.exports = function (grunt) {
 					{
 						expand: true,
 						cwd: 'src/',
-						src: 'palindrome.html',
+						src: 'index.html',
 						dest: BUILD_DIR + '/',
 					},
 					{
 						expand: true,
-						cwd: 'src/',
+						cwd: 'src/styles/',
 						src: 'style.css',
 						dest: BUILD_DIR + '/'
 					},
 					{
 						expand: true,
-						cwd: 'src/',
+						cwd: 'node_modules/semantic-ui-css/',
 						src: 'semantic.css',
 						dest: BUILD_DIR + '/'
-					},
-					{
-						expand: true,
-						cwd: 'src/',
-						src: 'semantic.js',
-						dest: BUILD_DIR + '/'
-					}
+					}					
 				]
 
 			}
 		},
 		jasmine: {
 			testAll: {
-				//src: '',
 				options: {
-					//polyfills: ['src/libs/polyfills.js'],
 					vendor: [
 						'node_modules/systemjs/dist/system.js'
 					],
-					//helpers: [''],
 					keepRunner: false,
 					outfile: 'test/specs.html',
 					specs: ['test/specs.js']
 				}
-			}
+			}			
 		},
 		systemjs: {
 			build: {
 				options: {
-					source: 'src/index.js',
+					source: 'src/modules/index.js',
 					output: BUILD_DIR + '/index.js',
 					minify: false,
 					sourceMaps: true
@@ -102,7 +87,7 @@ module.exports = function (grunt) {
 			},
 			buildmin: {
 				options: {
-					source: 'src/index.js',
+					source: 'src/modules/index.js',
 					output: BUILD_DIR + '/index.min.js',
 					minify: true,
 					sourceMaps: true
@@ -131,6 +116,6 @@ module.exports = function (grunt) {
 	grunt.registerTask('code', ['jshint:dev']);
 	grunt.registerTask('doc', ['clean:doc', 'jsdoc']);
 	grunt.registerTask('test', ['systemjs:test', 'jasmine', 'clean:test']);
-	grunt.registerTask('build', ['clean:build', 'systemjs:buildmin', 'copy:build']);
-	//	grunt.registerTask('build', ['clean:build', 'systemjs:build', 'systemjs:buildmin', 'copy:build']);
+	grunt.registerTask('build', ['clean:build','systemjs:build', 'systemjs:buildmin', 'copy:build']);
+	grunt.registerTask('release', ['build', 'test', 'code']);
 };

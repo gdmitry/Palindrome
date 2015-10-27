@@ -10,7 +10,7 @@ body {
 }
 
 .main {
-	background-color: #737375;
+	background-color: #fff;
 	font-family: Helvetica Neue';
 
 }
@@ -19,9 +19,10 @@ body {
 	width: 600px;
 	margin: 0 auto;
 	height: 100%;
-	background-color: #E9FAA5;
+	background-color: #fff;
 	padding: 10px;
 	box-sizing: border-box;
+	overflow: auto;
 }
 
 .title {

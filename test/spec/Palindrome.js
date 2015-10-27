@@ -82,5 +82,11 @@ describe('Palindrome', function () {
 			var output = palindrome.sortPalindromes(input);
 			expect(output).toEqual(["abba", "bab", "bb"]);
 		});
+		
+		it('return only unique palindromes', function () {
+			var input = ["bab", "bb", "abba","bb"];
+			var output = palindrome.getUniquePalindromes(input);
+			expect(output).toEqual(["bab", "bb", "abba"]);
+		});
 	});
 });
