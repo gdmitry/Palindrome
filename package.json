@@ -2,7 +2,7 @@
 	"name": "PalindromeApp",
 	"version": "1.0.0",
 	"description": "palindrome",
-	"main": "src/index.js",
+	"main": "src/modules/index.js",
 	"devDependencies": {
 		"jquery": "latest",
 		"grunt": "latest",
