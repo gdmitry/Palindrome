@@ -52,8 +52,8 @@ To deploy the project you need:
 ## Tests
 
 There are two possibilities to run tests: 
-1)	Use grunt test command to run tests from CLI.
-2)	Launch a file /test/index.html to run tests in browser.
+- Use grunt test command to run tests from CLI.
+- Launch a file /test/index.html to run tests in browser.
 For tests, I used BDD framework Jasmine. For more detailed test description, please refer to spec file – test/spec/palindrome.js.
 
 	
