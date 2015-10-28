@@ -67,9 +67,9 @@ module.exports = function (grunt) {
 		jasmine: {
 			testAll: {
 				options: {
-					vendor: [
-						'node_modules/systemjs/dist/system.js1'
-					],
+					//					vendor: [
+					//						'node_modules/systemjs/dist/system.js'
+					//					],
 					keepRunner: false,
 					outfile: 'test/specs.html',
 					specs: ['test/specs.js']
@@ -100,6 +100,18 @@ module.exports = function (grunt) {
 					minify: false
 				}
 			}
+		},
+		'ftp_upload': {
+			build: {
+				auth: {
+					host: '31.170.165.92',
+					port: 21,
+					authKey: 'key1'
+				},
+				src: 'build',
+				dest: '/public_html'
+					//				exclusions: ['path/to/source/folder/**/.DS_Store', 'path/to/source/folder/**/Thumbs.db', 'dist/tmp']
+			}
 		}
 	});
 
@@ -109,12 +121,14 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-jasmine');
+	grunt.loadNpmTasks('grunt-ftp-upload');
 	grunt.loadTasks('custom_modules/grunt-systemjs-builder/tasks');
 
 	grunt.registerTask('live', ['watch']);
+	grunt.registerTask('upload', ['ftp_upload']);
 	grunt.registerTask('code', ['jshint:dev']);
 	grunt.registerTask('doc', ['clean:doc', 'jsdoc']);
 	grunt.registerTask('test', ['systemjs:test', 'jasmine', 'clean:test']);
 	grunt.registerTask('build', ['clean:build', 'systemjs:build', 'systemjs:buildmin', 'copy:build']);
-	grunt.registerTask('release', ['test', 'code', 'build']);
+	grunt.registerTask('release', ['test', 'code', 'build', 'upload']);
 };
