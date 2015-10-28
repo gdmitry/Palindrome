@@ -1,6 +1,6 @@
 ## General
 
-Definition: A palindrome is a word, phrase, number, or other sequence of characters, which reads the same backward or forward. The project implementation project assumes one character is not a palindrome.
+Definition: A palindrome is a word, phrase, number, or other sequence of characters, which reads the same backward or forward. The project implementation assumes one character is not a palindrome.
 The task of identifying all palindromes in a string, I have divided on subtasks: 
 -	Splitting a string on substrings
 -	Check if a string is palindrome
@@ -54,6 +54,6 @@ To deploy the project you need:
 There are two possibilities to run tests: 
 - Use grunt test command to run tests from CLI.
 - Launch a file /test/index.html to run tests in browser.
-For tests, I used BDD framework Jasmine. For more detailed test description, please refer to spec file – test/spec/palindrome.js.
+For tests, I used BDD framework Jasmine. For more detailed tests description, please refer to spec file – test/spec/palindrome.js.
 
 	
